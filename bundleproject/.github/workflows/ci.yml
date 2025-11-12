@@ -40,7 +40,7 @@ jobs:
           echo "client_secret = $CLIENT_SECRET" >> ~/.databrickscfg
       
       - name: Validate Bundle
-        run: databricks bundle validate --target ${{ matrix.environment }} --profile azure-sp
+        run: databricks bundle validate --target ${{ matrix.environment }}
       
       - name: Deploy Bundle
-        run: databricks bundle deploy --target ${{ matrix.environment }} --profile azure-sp
+        run: databricks bundle deploy --target ${{ matrix.environment }} 
